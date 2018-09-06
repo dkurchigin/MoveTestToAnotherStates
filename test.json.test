@@ -1,0 +1,129 @@
+14_conditions;я не знаю здесь нет таких;18
+17_conditions;а что вы хотели?;19
+17_conditions;абсолютно нет;18
+17_conditions;ага;19
+17_conditions;ага угу;19
+17_conditions;аллё;17
+17_conditions;алло;17
+17_conditions;алло по какому поводу;19
+17_conditions;бывшая жена это;19
+17_conditions;да;19
+17_conditions;да алло;19
+17_conditions;да был знаком;18
+17_conditions;да вы что вообще куда звоните да слышь у нас таких не работаю нет не работал никогда;18
+17_conditions;да да;19
+17_conditions;да да да;19
+17_conditions;да да же очень;19
+17_conditions;да да знаю;19
+17_conditions;да да мне с ним работали когда то;19
+17_conditions;да да я знаю;19
+17_conditions;да даже очень;19
+17_conditions;да знакома она проживала и осталась правильно написала сим карту а;19
+17_conditions;да знаю;19
+17_conditions;да раньше вместе работали;19
+17_conditions;да угу;19
+17_conditions;да это я ой кого;check_need_verificaion
+17_conditions;да я;check_need_verificaion
+17_conditions;да я её знаю;19
+17_conditions;да я не знаю кто это;18
+17_conditions;естественно;19
+17_conditions;зачем он вам;19
+17_conditions;знаком;19
+17_conditions;знаком это я;check_need_verificaion
+17_conditions;как зовут?;1_2
+17_conditions;как фамилия?;1_2
+17_conditions;как?;1_2
+17_conditions;какого человека?;1_2
+17_conditions;какой человек я прослушала;1_2
+17_conditions;какой человек?;1_2
+17_conditions;кого я знаю?;1_2
+17_conditions;кто?;1_2
+17_conditions;мне знаком этот человек но он здесь не живёт;19
+17_conditions;на сотовый ему ну да работает такой;19
+17_conditions;не дееспособный;debtor_disabled
+17_conditions;не знаком;18
+17_conditions;недееспособный;debtor_disabled
+17_conditions;ну наверно не можете потому что я его совсем не знаю мне это мой телефон;18
+17_conditions;ну нет дома говорю знаком;19
+17_conditions;он мой бывший муж;19
+17_conditions;он мой муж но его сейчас нет дома;19_1
+17_conditions;она вышла;19
+17_conditions;она дома;19
+17_conditions;она у нас работает;19
+17_conditions;она уже не в первый раз не звонить на этот номер а и;18
+17_conditions;от куда вообще этот номер это что вы хотите;18
+17_conditions;откуда номер взяли;18
+17_conditions;очень;19
+17_conditions;ошиблись номером;18
+17_conditions;пожалуйста не беспокойте меня;(null)
+17_conditions;понятия не имею кто он такой;18
+17_conditions;работала у меня в магазине;19
+17_conditions;работала у меня в магазине, нет где она находится и где работает;19
+17_conditions;раньше был знаком;18
+17_conditions;раньше был знаком но она дала мой телефон номер телефона без моего дела я прошу вас больше не беспокойте меня;18
+17_conditions;симка год принадлежит мне;18
+17_conditions;симка уже как год принадлежит Иванову Василию Петровичу;18
+17_conditions;симку купил в салоне;18
+17_conditions;Симку купила;18
+17_conditions;слушай;(null)
+asked_fio_question;аллё, мы таких не знаем;18
+asked_fio_question;аллё, не знаком с таким;18
+asked_fio_question;аллё, не знаком с такой;18
+asked_fio_question;аллё, не знакома с таким;18
+asked_fio_question;аллё, не знакома с такой;18
+asked_fio_question;аллё, не расслышал, кто вы?;1
+asked_fio_question;аллё, он умер;debtor_dead
+asked_fio_question;аллё, она умерла;debtor_dead
+asked_fio_question;аллё, представьтесь ещё раз;1
+asked_fio_question;аллё, представьтесь ещё раз, пожалуйста;1
+asked_fio_question;аллё, я с ней не знаком;18
+asked_fio_question;аллё, я с ней не знакома;18
+asked_fio_question;аллё, я с ним не знаком;18
+asked_fio_question;аллё, я с ним не знакома;18
+asked_fio_question;аллё, я с таким не знаком;18
+asked_fio_question;аллё, я с таким не знакома;18
+asked_fio_question;аллё, я с такой не знаком;18
+asked_fio_question;аллё, я с такой не знакома;18
+asked_fio_question;аллё, я такого не знаю;18
+asked_fio_question;аллё, я такую не знаю;18
+asked_fio_question;алло;1_2
+asked_fio_question;алло вы разговариваете со мной;check_need_verificaion
+asked_fio_question;алло вы уже мне звонили;20
+asked_fio_question;алло да нет у нас уже такого сто лет;not_give_inf
+asked_fio_question;алло девушка здесь никакой елены анатольевны нету;17
+asked_fio_question;алло здравствуйте я вас внимательно слушаю;check_need_verificaion
+asked_fio_question;алло перестаньте мне звонить;1_2
+asked_fio_question;алло слушаю;20
+asked_fio_question;алло, внимательно;20
+asked_fio_question;алло, вы куда звоните?;1_2
+asked_fio_question;алло, вы ошиблись;18
+asked_fio_question;алло, вы ошиблись номером;18
+asked_fio_question;алло, вы уже мне звонили;20
+asked_fio_question;алло, да;20
+asked_fio_question;алло, да, доброе утро;20
+asked_fio_question;алло, да, добрый вечер;20
+asked_fio_question;алло, да, добрый день;20
+asked_fio_question;алло, да, здравствуйте;20
+asked_fio_question;алло, да, здрасьте;20
+asked_fio_question;алло, да, конечно, слушаю;check_need_verificaion
+asked_fio_question;алло, да, конечно, слушаю вас;check_need_verificaion
+asked_fio_question;алло, да, конечно, это я;check_need_verificaion
+asked_fio_question;алло, да, конечно, я слушаю;check_need_verificaion
+asked_fio_question;алло, да, можете;20
+asked_fio_question;алло, да, привет;20
+asked_fio_question;алло, да, приветствую;20
+asked_fio_question;алло, да, слушаю вас;check_need_verificaion
+asked_fio_question;алло, да, это я;check_need_verificaion
+asked_fio_question;алло, да, я слушаю;check_need_verificaion
+asked_fio_question;алло, доброе утро;20
+asked_fio_question;алло, доброе утро, да;20
+asked_fio_question;алло, добрый вечер;20
+asked_fio_question;алло, добрый вечер, да;20
+asked_verification_question;аллё, не знаком с таким;18
+asked_verification_question;аллё, не знаком с такой;18
+asked_verification_question;аллё, не знакома с таким;18
+asked_verification_question;аллё, не знакома с такой;18
+asked_verification_question;аллё, не расслышал, кто вы?;1
+asked_verification_question;аллё, он умер;debtor_dead
+asked_verification_question;аллё, она умерла;debtor_dead
+asked_verification_question;аллё, представьтесь ещё раз;1

@@ -1,16 +1,14 @@
 import re
 import os
 
-
-
+directory = '.'
+files = os.listdir(directory)
 
 finite_rule = "global_interrupts_wrong_phone"
 finite_state = "18"
 
 
 def print_files_on_dir():
-    directory = '.'
-    files = os.listdir(directory)
     n = 0
     
     print ('')
@@ -25,9 +23,19 @@ def print_files_on_dir():
         n += 1
     print ('')
     print ('')
+    print ('===================')
+    print ('')
+    print ('Select file with test. Enter the number:')
 
-print_files_on_dir()  
-print ('Select file with test')
-input()
+    
+def find_finite_state(file_path):
+    f = open(file_path, 'r', encoding='utf-8')
+    for line in f:
+        print (line)
+
+
+print_files_on_dir() 
+file_number = int(input())
+find_finite_state(str(files[file_number]))
 
 
