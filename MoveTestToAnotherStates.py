@@ -4,15 +4,14 @@ import os
 directory = '.'
 files = os.listdir(directory)
 
-rule_list = []
+condition_list = []
 
-finite_rule = "global_interrupts_wrong_phone"
-finite_state = "18"
+initial_condition = ""
+finite_condition = ""
 
 
 def print_files_on_dir():
-    n = 0
-    
+    n = 0   
     print ('')
     print ('')
     print ('===List of files===')
@@ -30,58 +29,58 @@ def print_files_on_dir():
     print ('Select file with test. Enter the number:')
 
     
-def find_finite_state(file_path):
+def find_conditions(file_path):
     f = open(file_path, 'r', encoding='utf-8')
+
     for line in f:
         pattern_for_state = re.findall(r'^\w+',line)
-        
-        if len(rule_list) == 0:
-            rule_list.append(pattern_for_state)
-        else:
-            #print (len(rule_list))
-            if len(rule_list) == 1:
-                if rule_list[0] != pattern_for_state:
-                    rule_list.append(pattern_for_state)
-                else:
-                    n = 0
-                    while n < 1:
-                        if rule_list[n] != pattern_for_state:
-                            rule_list.append(pattern_for_state)
-                        n += 1
-        #print (pattern_for_state)
-        
 
-
-print_files_on_dir() 
-file_number = int(input())
-find_finite_state(str(files[file_number]))
-print ('')
-print ('')
-print ('===================')
-print (rule_list[0])
-print (rule_list[1])
-#print (rule_list[2])
-print (len(rule_list))
-
-first = ["one", "two", "three"]
-second = []
- 
-for element in first:
-    print (element)
-    if len(second) == 0:
-        second.append(element)
-    else:
         n = 0
-        while n < len(second):
-            print ("there")
-            if second[n] != element:
-                second.append(element)
-            n += 1    
-    
+        equal_file = False
+        while n < len(condition_list):
+            if condition_list[n] == pattern_for_state:
+                equal_file = True
+            n += 1
+        if equal_file == False:
+            condition_list.append(pattern_for_state)
+        else:
+            equal_file = False
+
+    n = 0
+    print ('')
+    print ('')
+    print ('===List of conditions===')
+    print ('')
+    print ('')
+    while n < len(condition_list):
+        condition = condition_list[n]
+        result_string = "[" + str(n) + "]" + " - " + str(condition)
+        print (result_string)
+        n += 1
+    print ('')
+    print ('')
+    print ('========================')
+    print ('')
+    print ('Select condition from file. Enter the number:')
         
-print (second)
-#n = 0
-#while n < len(second):
-    #if second[n] != "boo":
-        #second.append("boo")
-    #n += 1
+
+#def copy_rules(initial,finite):
+#    f = open(file_number, 'r', encoding='utf-8')
+    
+#    for line in f:
+#        pattern_for_input_rules = re.findall(r''initial'',line)
+
+
+print_files_on_dir()
+ 
+file_number = int(input())
+find_conditions(str(files[file_number]))
+
+initial_condition = int(input())
+find_conditions(str(files[file_number]))
+finite_condition = int(input())
+
+print (initial_condition)
+print (finite_condition)
+
+#copy_rules(initial_condition,finite_condition)
