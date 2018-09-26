@@ -5,10 +5,11 @@ directory = '.'
 files = os.listdir(directory)
 
 condition_list = []
+final_state_list = []
 rule_list = []
 
 initial_condition = ""
-finite_condition = ""
+finite_state = ""
 
 
 def print_files_on_dir():
@@ -34,74 +35,71 @@ def find_conditions(file_path, type_condition):
     f = open(file_path, 'r', encoding='utf-8')
 
     for line in f:
-        pattern_for_state = re.findall(r'^\w+',line)
-
+        if type_condition == "initial":
+            pattern_for_state = re.findall(r'^\w+',line)
+        else:
+            pattern_for_state = re.findall(r'\w+$',line)
+            
         n = 0
         equal_file = False
-        while n < len(condition_list):
-            if condition_list[n] == pattern_for_state:
-                equal_file = True
-            n += 1
-        if equal_file == False:
-            condition_list.append(pattern_for_state)
+        
+        if type_condition == "initial":
+            while n < len(condition_list):
+                if condition_list[n] == pattern_for_state:
+                    equal_file = True
+                n += 1
+            if equal_file == False:
+                condition_list.append(pattern_for_state)
+            else:
+                equal_file = False
         else:
-            equal_file = False
-
+            while n < len(final_state_list):
+                if final_state_list[n] == pattern_for_state:
+                    equal_file = True
+                n += 1
+            if equal_file == False:
+                final_state_list.append(pattern_for_state)
+            else:
+                equal_file = False
+                
     f.close()
     n = 0
     print ('')
     print ('')
-    print ('===List of conditions===')
-    print ('')
-    print ('')
-    while n < len(condition_list):
-        condition = condition_list[n]
-        result_string = "[" + str(n) + "]" + " - " + str(condition)
-        print (result_string)
-        n += 1
+    if type_condition == "initial":
+        print ('===List of conditions===')
+        print ('')
+        print ('')
+        while n < len(condition_list):
+            condition = condition_list[n]
+            result_string = "[" + str(n) + "]" + " - " + str(condition)
+            print (result_string)
+            n += 1
+    else:
+        print ('===List of states===')
+        print ('')
+        print ('')
+        while n < len(final_state_list):
+            condition = final_state_list[n]
+            result_string = "[" + str(n) + "]" + " - " + str(condition)
+            print (result_string)
+            n += 1
+    
     print ('')
     print ('')
     print ('========================')
     print ('')
     if type_condition == "initial":
-        print ('Select INITIAL condition from file. Enter the number:')
+        print ('Select INITIAL CONDITION from file. Enter the number:')
     else:
-        print ('Select FINITE condition from file. Enter the number:')
+        print ('Select FINITE STATE from file. Enter the number:')
     
 
-def find_rules_in_initial_condition(file_path):
-    f = open(file_path, 'r', encoding='utf-8')
-    cond17 = "17_conditions"
-    for line in f:
-        pattern_for_state = re.findall(r'17_conditions.*\;\w+$',line)
-
-        n = 0
-        equal_file = False
-        while n < len(rule_list):
-            if rule_list[n] == pattern_for_state:
-                equal_file = True
-            n += 1
-        if equal_file == False:
-            rule_list.append(pattern_for_state)
-        else:
-            equal_file = False
-
-    f.close()
-    n = 0
-    print ('===List of rules in initial condition===')
-    print ('')
-    print ('')
-    while n < len(rule_list):
-        condition = rule_list[n]
-        result_string = "[" + str(n) + "]" + " - " + str(condition)
-        print (result_string)
-        n += 1
-    print ('')
-    final_string = "[" + str(n+1) + "]" + " - " + "copy ALL rules"
-    print (final_string)
-    print ('')
-    print ('========================')
-    print ('')
+def format_list_to_str(element):
+    formated_string = str(element).replace("['", "")
+    formated_string1 = formated_string.replace("']", "")
+    return formated_string1
+    
     
 #def copy_rules(initial,finite):
 #    f = open(file_number, 'r', encoding='utf-8')
@@ -113,16 +111,14 @@ def find_rules_in_initial_condition(file_path):
 print_files_on_dir() #files in dir
 file_number = int(input())
 
-find_rules_in_initial_condition(str(files[file_number]))
-
 find_conditions(str(files[file_number]),"initial")
 initial_condition = int(input())
 
 find_conditions(str(files[file_number]),"finite")
-finite_condition = int(input())
+finite_state = int(input())
 
 
-print (initial_condition)
-print (finite_condition)
+print (format_list_to_str(condition_list[initial_condition]))
+print (format_list_to_str(final_state_list[finite_state]))
 
-#copy_rules(initial_condition,finite_condition)
+#copy_rules(initial_condition,finite_state)
